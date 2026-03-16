@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management</title>
+</head>
+<body>
+    <center>
+    <h1>Student Management System</h1>
+    <form action="/Add_Student/" method="POST">
+        {% csrf_token %}
+        <h2>
+            <label for="Student_Name">Student Name :</label>
+            <input type="text" id="Student_Name" name="Student_Name" required><br><br>
+
+            <label for="Student_ID">Student ID :</label>
+            <input type="number" id="Student_ID" name="Student_ID" required><br><br>
+
+            <label for="Student_Percentage">Student Percentage :</label>
+            <input type="number" id="Student_Percentage" name="Student_Percentage" required><br><br>
+
+            <input type="submit" value="Submit">
+        </h2>    
+    </form>
+    </center>
+</body>
+</html>

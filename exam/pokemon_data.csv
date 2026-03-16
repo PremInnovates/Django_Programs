@@ -1,0 +1,16 @@
+Name,Type1,Type2,HP,Attack,Defense,Speed,Generation,Legendary
+Bulbasaur,Grass,,45,49,49,45,1,False
+Ivysaur,Grass,,60,62,63,60,1,False
+Venusaur,Grass,Poison,80,82,83,80,1,False
+Charmander,Fire,,39,52,43,65,1,False
+Charmeleon,Fire,,58,64,58,80,1,False
+Charizard,Fire,Flying,78,84,78,100,1,False
+Squirtle,Water,,44,48,65,43,1,False
+Wartortle,Water,,59,63,80,58,1,False
+Blastoise,Water,,79,83,100,78,1,False
+Pikachu,Electric,,35,55,40,90,1,False
+Raichu,Electric,,60,90,55,110,1,False
+Jigglypuff,Fairy,,115,45,20,20,1,False
+Gengar,Ghost,Poison,60,65,60,110,1,False
+Onix,Rock,Ground,35,45,160,70,1,False
+Mewtwo,Psychic,,106,110,90,130,1,True

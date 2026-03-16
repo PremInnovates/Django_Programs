@@ -1,0 +1,16 @@
+.sidebar{
+width:250px;
+background:#0F172A;
+min-height:100vh;
+}
+.menu{
+display:block;
+color:#CBD5E1;
+margin:10px 0;
+text-decoration:none;
+}
+.menu:hover{color:#4F46E5;}
+.card{
+border-radius:16px;
+box-shadow:0 10px 20px rgba(0,0,0,.1);
+}

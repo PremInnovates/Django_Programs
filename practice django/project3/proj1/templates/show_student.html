@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Data</title>
+</head>
+<body>
+    <center>
+    <h1>Student Data</h1>
+    <table border="1">
+        <tr>
+            <th>Student Name</th>
+            <th>Student ID</th>
+            <th>Student Percentage</th>
+        </tr>
+        {%for Student in Student %}
+        <tr>
+            <td>{{Student.Student_Name}}</td>
+            <td>{{Student.Student_ID}}</td>
+            <td>{{Student.Student_Percentage}}</td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="3">No Student Found.</td>
+        </tr>
+        {% endfor %}
+    </table>
+</center>
+</body>
+
+</html>
