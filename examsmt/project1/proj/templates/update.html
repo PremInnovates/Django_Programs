@@ -1,0 +1,8 @@
+<form method="POST">
+    {% csrf_token %}
+    name:<input type="text" name="name" value="{{s.name}}"><br><br>
+    age:<input type="text" name="age" value="{{s.age}}"><br><br>
+    rollno:<input type="text" name="rollno" value="{{s.rollno}}"><br><br>
+
+    <button type="submit">update</button>
+    </form>

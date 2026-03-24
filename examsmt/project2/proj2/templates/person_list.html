@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="2">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Salary</th>
+            <th>Action</th>
+        </tr>
+        <tr>
+            {% for person in persons %}
+            <td>{{person.name}}</td>
+            <td>{{person.age}}</td>
+            <td>{{person.salary}}</td>
+            <td><a href="{% url 'edit_person' person.id%}">Edit</a></td>
+            <td><a href="{% url 'delete_person' person.id%}">Delete</a></td>
+        </tr>
+
+    </table>
+</body>
+</html>

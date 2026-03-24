@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Data</h2>
+    <table border="2">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>update</th>
+            <th>Delete</th>
+        </tr>
+        {% for men in mens%}
+        <tr>
+            <td>{{men.name}}</td>
+            <td>{{men.age}}</td>
+            <td><a href="{% url 'update_men' men.id %}">Update</a></td>
+            <td>
+                <form action="{% url 'delete_men' men.id %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit">Delete</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="{%url 'home' %}">Register Data</a>
+</body>
+</html>

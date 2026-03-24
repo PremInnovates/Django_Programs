@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="POST">
+        {%csrf_token %}
+    <center>
+    <label for="name">name :</label>
+    <input type="text" id="name" name="name" required><br>
+    <label for="age">age :</label>
+    <input type="text" id="age" name="age" required><br>
+
+    <label for="rollno">rollno</label>
+    <input type="text" id="rollno" name="rollno" required><br>
+
+    <button type="submit">submit</button><br><br>
+    <a href="{% url 'student_list' %}">
+        <button type="button">view student list</button>
+    </a>
+</center>
+</form>
+</body>
+</html>
