@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product</title>
+</head>
+<body>
+    <center>
+        <h1>Add Product</h1>
+        <form action="/add/" method="POST">
+            {% csrf_token %}
+            id:<input type="Integer" name="id" id="id"><br>
+            name:<input type="text" name="name" id="name"><br>
+            price:<input type="Integer" name="price" id="price"><br>
+            <button type="submit">Add Record</button>
+        </form>
+    </center>
+</body>
+</html>

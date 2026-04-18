@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <center>
+    <h1>Product Management</h1>
+    <table border="1">
+        <a href="/add/">Add product</a>
+        <tr>
+            <th>Product ID</th>
+            <th>Product Name</th>
+            <th>Price</th>
+            <th>Actions</th>
+        </tr>
+
+        {% for pro in products %}
+        <tr>
+            <td>{{pro.id}}</td>
+            <td>{{pro.name}}</td>
+            <td>{{pro.price}}</td>
+            <td>
+                <a href="/update/{{ pro.id }}">Update</a>
+                <a href="/delete/{{ pro.id }}">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <a href="/logout/">Logout</a>
+    </center>
+
+</body>
+</html>

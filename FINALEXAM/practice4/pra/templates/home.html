@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+</head>
+<body>
+    <center>
+        <h1>Person Management</h1>
+        <a href="/add/">Add Record</a>
+        <table border="1">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Salary</th>
+                <th>Action</th>
+            </tr>
+
+            {% for per in persons %}
+            <tr>
+                <td>{{ per.id }}</td>
+                <td>{{ per.name }}</td>
+                <td>{{ per.salary }}</td>
+                <td>
+                    <a href="/update/{{ per.id }}">Update</a>
+                    <a href="/delete/{{ per.id }}">Delete</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+        <br>
+        <a href="/logout/">Logout</a>
+    </center>
+</body>
+</html>

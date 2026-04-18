@@ -7,4 +7,4 @@ class Employee(models.Model):
     salary = models.FloatField()
 
     def __str__(self):
-        return self.name
+        return self.name    

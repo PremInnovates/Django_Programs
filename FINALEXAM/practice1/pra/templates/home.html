@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management</title>
+</head>
+<body>
+    <h1>Employee Management</h1>
+    <a href="/add/">Add Employee</a>
+    <table border="1">
+        <thread>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Actions</th>
+        </tr>
+        </thread>
+
+        <tr>
+            {% for emp in Employees %}
+            <td>{{emp.id}}</td>
+            <td>{{emp.name}}</td>
+            <td>{{emp.Department}}</td><br>
+            <td>
+                <a href="/update/{{ emp.id }}">Edit</a>
+                <a href="/delete/{{ emp.id }}">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    
+</body>
+</html>
